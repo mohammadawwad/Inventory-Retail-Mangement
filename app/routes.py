@@ -7,7 +7,7 @@ from helpers.user_helpers import validateuser, getUserByID
 
 @app.route("/")
 def index():
-    return render_template("index.html", name="Cloverdale Robotics")
+    return render_template("index.html")
 
 
 @app.route("/menu", methods=["GET", "POST"])
