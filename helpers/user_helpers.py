@@ -82,7 +82,7 @@ def insertnewuser(details):
         ph = details["ph"]
         cur = mysql.get_db().cursor()
         cur.execute(
-            "INSERT INTO Users(UserName,Password,FirstName,Lastname,EmailID,Phone, RoleID) VALUES (%s, %s,%s,%s,%s,%s,%s)",
+            "INSERT INTO Users(UserName,Password,FirstName,Lastname,EmailID,Phone, RoleID) VALUES (%s,%s,%s,%s,%s,%s,%s)",
             (userID, password, fName, lName, email, ph, roleType),
         )
         mysql.get_db().commit()
